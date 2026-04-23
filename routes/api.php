@@ -11,6 +11,11 @@ Route::get('/user', function (Request $request) {
 
 
 Route::get('/products', [ProductController::class, 'index']);
+Route::post('/product', [ProductController::class, 'store']);
 
 Route::get('/clientes', [ClienteController::class, 'index']);
+
+Route::post('/cliente', [ClienteController::class, 'store']);
+
+
 
