@@ -12,10 +12,18 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/products', [ProductController::class, 'index']);
 Route::post('/product', [ProductController::class, 'store']);
+Route::put('/product/{product}', [ProductController::class, 'update']);
+Route::delete('/product/{product}', [ProductController::class, 'destroy']);
 
 Route::get('/clientes', [ClienteController::class, 'index']);
 
 Route::post('/cliente', [ClienteController::class, 'store']);
+Route::put('/cliente/{cliente}', [ClienteController::class, 'update']);
+Route::delete('/cliente/{cliente}', [ClienteController::class, 'destroy']);
+Route::get('/clientes/{cliente}/proyectos', [ClienteController::class, 'proyectos']);
+
+
+
 
 
 
